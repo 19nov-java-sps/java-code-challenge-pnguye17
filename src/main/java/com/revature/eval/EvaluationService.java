@@ -1,5 +1,7 @@
 package com.revature.eval;
 
+import java.util.Map;
+
 public class EvaluationService {
 
 	/**
@@ -11,6 +13,10 @@ public class EvaluationService {
 	 */
 	public String reverse(String string) {
 		// TODO Write an implementation for this method declaration
+		
+		if (string == null) {
+			return null;
+		}
 		
 		String n = "";
 		
@@ -75,8 +81,42 @@ public class EvaluationService {
 	public int getScrabbleScore(String string) {
 		// TODO Write an implementation for this method declaration
 		
-	
-		return 0;
+		// create hash with key and value pairs  
+		
+		String newString = string.toUpperCase();
+ 		char[] splittedWord = newString.toCharArray();
+ 		int addScore = 1;
+ 		int score = 0;
+
+ 		for ( char character : splittedWord) {
+ 			System.out.println(character);
+ 			if (character == 'D' || character == 'G') {
+ 				addScore = 2;
+ 				score += addScore;
+ 			} else if (character == 'B' || character == 'C' || character == 'M' || character == 'P') {
+ 				addScore = 3;
+ 				score += addScore;
+ 			} else if (character == 'F' || character == 'H' || character == 'W' || character == 'Y') {
+ 				addScore = 4;
+ 				score += addScore;
+ 			} else if (character == 'K') {
+ 				addScore = 5;
+ 				score += addScore;
+ 			} else if (character == 'J' || character == 'X') {
+ 				addScore = 8;
+ 				score += addScore;
+ 			} else if (character == 'Q' || character == 'Z') {
+ 				addScore = 10;
+ 				score += addScore;
+ 			} else {
+ 				addScore = 1;
+ 				score += addScore;
+ 			}
+ 		}
+    
+
+    	System.out.println(score);
+    	return score; 
 	}
 	
 	

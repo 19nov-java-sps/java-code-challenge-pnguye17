@@ -25,7 +25,6 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 1
 	 ******************************************************************/
-//	
 //	@Test
 //	public void reverseNullString() {
 //		assertNull(evaluationService.reverse(null));
@@ -55,76 +54,76 @@ public class EvaluationServiceTest {
 //	public void testAPalindrome() {
 //		assertEquals("racecar", evaluationService.reverse("racecar"));
 //	}
+//
+//	/*******************************************************************
+//	 * Question 2
+//	 ******************************************************************/
 //	
+//	@Test
+//	public void testNullPhrase() {
+//		final String phrase = null;
+//		assertNull(evaluationService.acronym(phrase));
+//	}
+//	
+//	@Test
+//	public void basic() {
+//		final String phrase = "Portable Network Graphics";
+//		final String expected = "PNG";
+//		assertEquals(expected, evaluationService.acronym(phrase));
+//	}
+//
+//	@Test
+//	public void punctuation() {
+//		final String phrase = "First In, First Out";
+//		final String expected = "FIFO";
+//		assertEquals(expected, evaluationService.acronym(phrase));
+//	}
+//
+//	@Test
+//	public void NonAcronymAllCapsWord() {
+//		final String phrase = "GNU Image Manipulation Program";
+//		final String expected = "GIMP";
+//		assertEquals(expected, evaluationService.acronym(phrase));
+//	}
+//
+//	@Test
+//	public void punctuationWithoutWhitespace() {
+//		final String phrase = "Complementary metal-oxide semiconductor";
+//		final String expected = "CMOS";
+//		assertEquals(expected, evaluationService.acronym(phrase));
+//	}
+
 	/*******************************************************************
-	 * Question 2
+	 * Question 3
 	 ******************************************************************/
+	@Test
+	public void testAValuableLetter() {
+		assertEquals(4, evaluationService.getScrabbleScore("f"));
+	}
+
+	@Test
+	public void testAShortValuableWord() {
+		assertEquals(12, evaluationService.getScrabbleScore("zoo"));
+	}
+
+	@Test
+	public void testAMediumWord() {
+		assertEquals(6, evaluationService.getScrabbleScore("street"));
+	}
+
+	@Test
+	public void testAMediumValuableWord() {
+		assertEquals(22, evaluationService.getScrabbleScore("quirky"));
+	}
+
+	@Test
+	public void testALongMixCaseWord() {
+		assertEquals(41, evaluationService.getScrabbleScore("OxyphenButazone"));
+	}
 	
-	@Test
-	public void testNullPhrase() {
-		final String phrase = null;
-		assertNull(evaluationService.acronym(phrase));
-	}
-	
-	@Test
-	public void basic() {
-		final String phrase = "Portable Network Graphics";
-		final String expected = "PNG";
-		assertEquals(expected, evaluationService.acronym(phrase));
-	}
-
-	@Test
-	public void punctuation() {
-		final String phrase = "First In, First Out";
-		final String expected = "FIFO";
-		assertEquals(expected, evaluationService.acronym(phrase));
-	}
-
-	@Test
-	public void NonAcronymAllCapsWord() {
-		final String phrase = "GNU Image Manipulation Program";
-		final String expected = "GIMP";
-		assertEquals(expected, evaluationService.acronym(phrase));
-	}
-
-	@Test
-	public void punctuationWithoutWhitespace() {
-		final String phrase = "Complementary metal-oxide semiconductor";
-		final String expected = "CMOS";
-		assertEquals(expected, evaluationService.acronym(phrase));
-	}
-//	
-//	/*******************************************************************
-//	 * Question 3
-//	 ******************************************************************/
-//	@Test
-//	public void testAValuableLetter() {
-//		assertEquals(4, evaluationService.getScrabbleScore("f"));
-//	}
-//
-//	@Test
-//	public void testAShortValuableWord() {
-//		assertEquals(12, evaluationService.getScrabbleScore("zoo"));
-//	}
-//
-//	@Test
-//	public void testAMediumWord() {
-//		assertEquals(6, evaluationService.getScrabbleScore("street"));
-//	}
-//
-//	@Test
-//	public void testAMediumValuableWord() {
-//		assertEquals(22, evaluationService.getScrabbleScore("quirky"));
-//	}
-//
-//	@Test
-//	public void testALongMixCaseWord() {
-//		assertEquals(41, evaluationService.getScrabbleScore("OxyphenButazone"));
-//	}
-//	
-//	/*******************************************************************
-//	 * Question 4
-//	 ******************************************************************/
+	/*******************************************************************
+	 * Question 4
+	 ******************************************************************/
 //	@Test
 //	public void countOneWord() {
 //		Map<String, Integer> expectedWordCount = new HashMap<>();
@@ -179,10 +178,10 @@ public class EvaluationServiceTest {
 //		Map<String, Integer> actualWordCount = evaluationService.wordCount("one,\ntwo,\nthree");
 //		assertEquals(expectedWordCount, actualWordCount);
 //	}
-//	
-//	/*******************************************************************
-//	 * Question 5
-//	 ******************************************************************/
+	
+	/*******************************************************************
+	 * Question 5
+	 ******************************************************************/
 //	
 //	@Test
 //	public void findsAValueInTheMiddleOfAnArray() {
