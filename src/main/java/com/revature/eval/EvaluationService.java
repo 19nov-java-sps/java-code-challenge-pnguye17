@@ -41,12 +41,19 @@ public class EvaluationService {
 		// iterate through the string with for loop, 
 		// create Arrays of words, word[0] added to new acronym array
 		
-		String trimmedPhrase = phrase.trim();
-		String accroynm;
-		for (int i = 0, i < ) {
-			accroynm.
+		if (phrase == null) {
+			return null;
 		}
-		return null;
+	    String[] splitted = phrase.split("\\W+");
+	    String answer = "";
+
+	    int i = 0;
+	    while ( i < splitted.length) {
+	      String word = splitted[i];
+	      answer += word.charAt(0);
+	      i++;
+	    };
+	    return answer.toUpperCase();
 	}
 	
 	

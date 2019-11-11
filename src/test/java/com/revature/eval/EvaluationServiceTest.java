@@ -25,37 +25,37 @@ public class EvaluationServiceTest {
 	/*******************************************************************
 	 * Question 1
 	 ******************************************************************/
-	
-	@Test
-	public void reverseNullString() {
-		assertNull(evaluationService.reverse(null));
-	}
-	
-	@Test
-	public void testAnEmptyString() {
-		assertEquals("", evaluationService.reverse(""));
-	}
-
-	@Test
-	public void testAWord() {
-		assertEquals("tobor", evaluationService.reverse("robot"));
-	}
-
-	@Test
-	public void testACapitalizedWord() {
-		assertEquals("nemaR", evaluationService.reverse("Ramen"));
-	}
-
-	@Test
-	public void testASentenceWithPunctuation() {
-		assertEquals("!yrgnuh m'I", evaluationService.reverse("I'm hungry!"));
-	}
-
-	@Test
-	public void testAPalindrome() {
-		assertEquals("racecar", evaluationService.reverse("racecar"));
-	}
-	
+//	
+//	@Test
+//	public void reverseNullString() {
+//		assertNull(evaluationService.reverse(null));
+//	}
+//	
+//	@Test
+//	public void testAnEmptyString() {
+//		assertEquals("", evaluationService.reverse(""));
+//	}
+//
+//	@Test
+//	public void testAWord() {
+//		assertEquals("tobor", evaluationService.reverse("robot"));
+//	}
+//
+//	@Test
+//	public void testACapitalizedWord() {
+//		assertEquals("nemaR", evaluationService.reverse("Ramen"));
+//	}
+//
+//	@Test
+//	public void testASentenceWithPunctuation() {
+//		assertEquals("!yrgnuh m'I", evaluationService.reverse("I'm hungry!"));
+//	}
+//
+//	@Test
+//	public void testAPalindrome() {
+//		assertEquals("racecar", evaluationService.reverse("racecar"));
+//	}
+//	
 	/*******************************************************************
 	 * Question 2
 	 ******************************************************************/
