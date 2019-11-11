@@ -1,8 +1,5 @@
 package com.revature.eval;
 
-import java.util.List;
-import java.util.Map;
-
 public class EvaluationService {
 
 	/**
@@ -14,7 +11,19 @@ public class EvaluationService {
 	 */
 	public String reverse(String string) {
 		// TODO Write an implementation for this method declaration
-		return null;
+		
+		String n = "";
+		
+		try {
+			for (int i = string.length() - 1; i >= 0; i--) {
+				String x = string.substring(i, i+1);
+				n += x;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return n; 
+		
 	}
 
 	
@@ -28,6 +37,15 @@ public class EvaluationService {
 	 */
 	public String acronym(String phrase) {
 		// TODO Write an implementation for this method declaration
+			
+		// iterate through the string with for loop, 
+		// create Arrays of words, word[0] added to new acronym array
+		
+		String trimmedPhrase = phrase.trim();
+		String accroynm;
+		for (int i = 0, i < ) {
+			accroynm.
+		}
 		return null;
 	}
 	
@@ -49,6 +67,8 @@ public class EvaluationService {
 	 */
 	public int getScrabbleScore(String string) {
 		// TODO Write an implementation for this method declaration
+		
+	
 		return 0;
 	}
 	
@@ -64,6 +84,9 @@ public class EvaluationService {
 	 */
 	public Map<String, Integer> wordCount(String string) {
 		// TODO Write an implementation for this method declaration
+		
+		// make a hashTable with key ,values where key represents letters and then values indicate how
+		// many are they.
 		return null;
 	}
 	
