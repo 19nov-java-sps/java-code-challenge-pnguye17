@@ -1,5 +1,6 @@
 package com.revature.eval;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class EvaluationService {
@@ -130,11 +131,32 @@ public class EvaluationService {
 	 * @return 
 	 */
 	public Map<String, Integer> wordCount(String string) {
-		// TODO Write an implementation for this method declaration
-		
-		// make a hashTable with key ,values where key represents letters and then values indicate how
-		// many are they.
-		return null;
+	
+	    
+	    String[] words = string.split("\\s+");
+	    String initialWord = "";
+	    String comparedWord = "";
+	    int counter = 1;
+
+	    Map<String, Integer> ans = new HashMap<String, Integer>();
+	    
+	    for (int k = 0 ;  k < words.length - 1 ; k++ ) {
+	      System.out.println("==============");
+	      System.out.println("starting index :" + k);
+	      initialWord = words[k];
+	      if (words.length == 1) {
+	          initialWord = initialWord.valueOf(0);
+	          System.out.println(initialWord);
+	          return ans.put(initialWord, counter);
+	      } else {
+	        comparedWord = words[ k + 1];
+	          if (initialWord.contains(comparedWord)) {
+	            counter++;
+	            return ans.put(initialWord, counter);
+	          }
+	      }
+	    }  
+	  }
 	}
 	
 	/**
