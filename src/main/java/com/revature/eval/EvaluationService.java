@@ -131,33 +131,20 @@ public class EvaluationService {
 	 * @return 
 	 */
 	public Map<String, Integer> wordCount(String string) {
-	
-	    
-	    String[] words = string.split("\\s+");
-	    String initialWord = "";
-	    String comparedWord = "";
-	    int counter = 1;
-
-	    Map<String, Integer> ans = new HashMap<String, Integer>();
-	    
-	    for (int k = 0 ;  k < words.length - 1 ; k++ ) {
-	      System.out.println("==============");
-	      System.out.println("starting index :" + k);
-	      initialWord = words[k];
-	      if (words.length == 1) {
-	          initialWord = initialWord.valueOf(0);
-	          System.out.println(initialWord);
-	          return ans.put(initialWord, counter);
-	      } else {
-	        comparedWord = words[ k + 1];
-	          if (initialWord.contains(comparedWord)) {
-	            counter++;
-	            return ans.put(initialWord, counter);
-	          }
+		String[] splitted = string.split(" ");
+		Map<String, Integer> wordCounter = new HashMap<String, Integer>();
+		
+		for (int i=0; i<splitted.length ; i++) {
+			 if (wordCounter.containsKey(splitted[i])) {
+			      int cont = wordCounter.get(splitted[i]);
+			      wordCounter.put(splitted[i], cont + 1);
+			 } else {
+				 wordCounter.put(splitted[i], 1);
+			 }
 	      }
-	    }  
-	  }
+		return wordCounter;
 	}
+	
 	
 	/**
 	 * 5. Implement a binary search algorithm.
